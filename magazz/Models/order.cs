@@ -1,12 +1,12 @@
 ﻿namespace magazz.Models
 {
-    public class order //заказ
+    public class Order //заказ
     {
-        public int id { get; set; }
-        public int workerId { get; set; }
-        public int productId { get; set; }
-        public int customerId { get; set; }
-        public int amount { get; set; }
+        public int Id { get; set; }
+        public int WorkerId { get; set; }
+        public int ProductId { get; set; }
+        public int CustomerId { get; set; }
+        public int Amount { get; set; }
 
 
     }

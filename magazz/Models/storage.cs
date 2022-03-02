@@ -1,10 +1,10 @@
 ﻿namespace magazz.Models
 {
-    public class storage //склад
+    public class Storage //склад
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string contact { get; set; }
-        public string address { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Contact { get; set; }
+        public string Address { get; set; }
     }
 }

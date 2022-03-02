@@ -1,10 +1,10 @@
-﻿namespace magazz.Models
+﻿ namespace magazz.Models
 {
-    public class customer //покупатель
+    public class Customer //покупатель
     {
-        public int id { get; set; }
-        public string fullname { get; set; }
-        public string address { get; set; }
-        public int phone { get; set; }
+        public int Id { get; set; }
+        public string Fullname { get; set; }
+        public string Address { get; set; }
+        public int Phone { get; set; }
     }
 }

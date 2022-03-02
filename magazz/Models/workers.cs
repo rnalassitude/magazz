@@ -1,9 +1,9 @@
 ﻿namespace magazz.Models
 {
-    public class workers //работники
+    public class Workers //работники
     {
-        public int id { get; set; }
-        public string fullname { get; set; }
-        public int postId { get; set; }
+        public int Id { get; set; }
+        public string Fullname { get; set; }
+        public int PostId { get; set; }
     }
 }

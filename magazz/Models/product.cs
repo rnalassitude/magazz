@@ -1,9 +1,9 @@
 ﻿namespace magazz.Models
 {
-    public class product //товары
+    public class Product //товары
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public int price { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
     }
 }

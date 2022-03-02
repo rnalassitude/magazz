@@ -1,12 +1,12 @@
 ﻿namespace magazz.Models
 {
-    public class purchase //закупка
+    public class Purchase //закупка
     {
-        public int id { get; set; }
-        public int productId { get; set; }
-        public int storageId { get; set; }
-        public int count { get; set; }
-        public int amount { get; set; }
+        public int Id { get; set; }
+        public int ProductId { get; set; }
+        public int StorageId { get; set; }
+        public int Count { get; set; }
+        public int Amount { get; set; }
 
     }
 }

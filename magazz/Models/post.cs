@@ -1,8 +1,8 @@
 ﻿namespace magazz.Models
 {
-    public class post //должность
+    public class Post //должность
     {
-        public int id { get; set; }
-        public string name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
