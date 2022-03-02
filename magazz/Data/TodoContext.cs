@@ -17,7 +17,18 @@ namespace magazz.Models
         public DbSet<Storage> Storages { get; set; } = null!;
         public DbSet<Worker> Workers { get; set; } = null!;
 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Add the shadow property to the model
+            modelBuilder.Entity<Post>()
+                .HasOne(b => b.Worker)
+                .WithOne(i => i.Post)
+                .HasForeignKey<Worker>(b => b.IdPost);
+        }
     }
 }
+
+     
 
 
