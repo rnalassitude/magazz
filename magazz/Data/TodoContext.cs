@@ -17,15 +17,42 @@ namespace magazz.Models
         public DbSet<Storage> Storages { get; set; } = null!;
         public DbSet<Worker> Workers { get; set; } = null!;
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Add the shadow property to the model
             modelBuilder.Entity<Post>()
                 .HasOne(b => b.Worker)
                 .WithOne(i => i.Post)
-                .HasForeignKey<Worker>(b => b.IdPost);
+                .HasForeignKey<Worker>(b => b.Id);
+
+            modelBuilder.Entity<Customer>()
+                .HasOne(c => c.Order)
+                .WithOne(d => d.Customer)
+                .HasForeignKey<Order>(d => d.Id);
+
+            modelBuilder.Entity<Storage>()
+                .HasOne(e => e.Purchase)
+                .WithOne(f => f.Storage)
+                .HasForeignKey<Purchase>(e => e.Id); 
+            
+            modelBuilder.Entity<Product>()
+                .HasOne(h => h.Purchase)
+                .WithOne(j => j.Product)
+                .HasForeignKey<Purchase>(h => h.Id);
+
+            modelBuilder.Entity<Product>()
+                .HasOne(h => h.Order)
+                .WithOne(j => j.Product)
+                .HasForeignKey<Order>(h => h.Id);
+
+            modelBuilder.Entity<Worker>()
+                .HasOne(l => l.Order)
+                .WithOne(m => m.Worker)
+                .HasForeignKey<Order>(l => l.Id);
+
+
         }
+
     }
 }
 
